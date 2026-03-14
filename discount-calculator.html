@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Discount Calculator</title>
+<style>
+body{
+font-family:Arial;
+max-width:600px;
+margin:auto;
+padding:40px;
+text-align:center;
+}
+input{
+padding:8px;
+margin:5px;
+width:120px;
+}
+button{
+padding:10px 20px;
+margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Discount Calculator</h1>
+
+<p>Calculate price after discount</p>
+
+<input id="price" placeholder="Original price">
+<input id="discount" placeholder="Discount %">
+
+<br>
+
+<button onclick="calc()">Calculate</button>
+
+<h2 id="result"></h2>
+
+<script>
+function calc(){
+let price = document.getElementById("price").value;
+let discount = document.getElementById("discount").value;
+
+let final = price - (price * discount / 100);
+
+document.getElementById("result").innerText = final;
+}
+</script>
+
+</body>
+</html>
