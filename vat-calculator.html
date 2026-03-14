@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>VAT Calculator</title>
+<style>
+body{
+font-family:Arial;
+max-width:600px;
+margin:auto;
+padding:40px;
+text-align:center;
+}
+input{
+padding:8px;
+margin:5px;
+width:120px;
+}
+button{
+padding:10px 20px;
+margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>VAT Calculator</h1>
+
+<p>Calculate price with VAT</p>
+
+<input id="price" placeholder="Price">
+<input id="vat" placeholder="VAT %">
+
+<br>
+
+<button onclick="calc()">Calculate</button>
+
+<h2 id="result"></h2>
+
+<script>
+function calc(){
+let price = document.getElementById("price").value;
+let vat = document.getElementById("vat").value;
+
+let total = price * (1 + vat/100);
+
+document.getElementById("result").innerText = total;
+}
+</script>
+
+</body>
+</html>
